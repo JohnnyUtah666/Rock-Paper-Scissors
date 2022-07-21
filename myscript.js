@@ -12,39 +12,43 @@ function getComputerChoice(array) {
 
 let playerSelection = prompt("Rock, Paper, or Scissors?")
 let computerSelection = getComputerChoice(choice);
-playRound(playerSelection, computerSelection);
-
 
 function playRound(playerSelection, computerSelection) {
      
-    if (playerSelection == "rock" && computerSelection == "scissors") {
+    if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
         winner = "Rock beats scissors, you win!";
 
-     } else if (playerSelection == "rock" && computerSelection == "paper") {
+     } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
         winner = "Paper beats rock, you lose!";
     
-     } else if (playerSelection == "rock" && computerSelection == "rock") {
+     } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock") {
         winner = "Rock on rock, tie game!";
 
-     } else if (playerSelection == "paper" && computerSelection == "rock") {
+     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
         winner = "Paper beats rock, you win!";
 
-     } else if (playerSelection == "paper" && computerSelection == "paper") {
+     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") {
         winner = "Paper on paper, tie game!";
 
-     } else if (playerSelection == "paper" && computerSelection == "scissors") {
+     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
         winner = "Scissors beats paper, you lose!";
 
-     } else if (playerSelection == "scissors" && computerSelection == "rock") {
+     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
         winner = "Rock beats scissors, you lose!";
 
-     } else if (playerSelection == "scissors" && computerSelection == "paper") {
+     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
         winner = "Scissors beat paper, you win!";
 
-     } else {
+     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors") {
         winner = "Scissors on Scissors, tie game!";
+
+     } else {
+        winner = "Invalid Input";
+     
         return winner;
 
 }
+}
+console.log(playRound(playerSelection, computerSelection));
 
-console.log(getComputerChoice(choice))}
+console.log(winner);
