@@ -10,7 +10,7 @@ function getComputerChoice(array) {
     return array[Math.floor(Math.random()*choice.length)];
 }
 
-let playerSelection = prompt("Rock, Paper, or Scissors?")
+let playerSelection = prompt("Rock, Paper, or Scissors?");
 let computerSelection = getComputerChoice(choice);
 
 function playRound(playerSelection, computerSelection) {
@@ -46,7 +46,8 @@ function playRound(playerSelection, computerSelection) {
         return winner = "Invalid Input";
 
 }
+function game() {
+   playRound(playerSelection, computerSelection);
+}
 }
 console.log(playRound(playerSelection, computerSelection));
-
-console.log(winner);
