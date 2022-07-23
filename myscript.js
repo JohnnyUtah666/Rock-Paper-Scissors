@@ -46,8 +46,13 @@ function playRound(playerSelection, computerSelection) {
         return winner = "Invalid Input";
 
 }
+}
 function game() {
-   playRound(playerSelection, computerSelection);
+   for (i=0; i<=5; i++)
+   {
+      playRound(playerSelection, computerSelection);
+   }
+   return winner;
 }
-}
-console.log(playRound(playerSelection, computerSelection));
+
+console.log(game());
